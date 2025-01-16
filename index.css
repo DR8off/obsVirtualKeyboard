@@ -1,0 +1,24 @@
+.keyboard {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.keyboardKey {
+    border: 1px solid black;
+    border-radius: 0.8rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+
+.active {
+    transform: scale(0.9);
+    background-color: black;
+    color: white;
+}
