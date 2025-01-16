@@ -2,7 +2,7 @@ const keyboardKeys = ['w','a','s','d']
 const keyboard = document.createElement('div')
 keyboard.classList.add('keyboard')
 document.body.appendChild(keyboard)
-
+// some text
 keyboardKeys.forEach(key => {
     const keyboardKey = document.createElement('div')
     keyboardKey.classList.add('keyboardKey', key)
