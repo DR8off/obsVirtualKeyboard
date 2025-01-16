@@ -23,3 +23,7 @@ document.addEventListener('keyup', (e) => {
     const { key } = e
     document.querySelector(`.${key}`).classList.remove('active')
 })
+
+setInterval(() => {
+    document.body.classList.toggle('active')
+}, 500)
