@@ -2,7 +2,7 @@ const keyboardKeys = ['w','a','s','d']
 const keyboard = document.createElement('div')
 keyboard.classList.add('keyboard')
 document.body.appendChild(keyboard)
-// some text
+
 keyboardKeys.forEach(key => {
     const keyboardKey = document.createElement('div')
     keyboardKey.classList.add('keyboardKey', key)
@@ -11,19 +11,16 @@ keyboardKeys.forEach(key => {
     keyboard.appendChild(keyboardKey)
 })
 
-document.addEventListener('keydown', (e) => {
+keyboard.addEventListener('keydown', (e) => {
     e.preventDefault()
 
     const { key } = e
     document.querySelector(`.${key}`).classList.add('active')
 })
-document.addEventListener('keyup', (e) => {
+keyboard.addEventListener('keyup', (e) => {
     e.preventDefault()
 
     const { key } = e
     document.querySelector(`.${key}`).classList.remove('active')
 })
-
-setInterval(() => {
-    document.body.classList.toggle('active')
-}, 500)
+keyboard.focus()
