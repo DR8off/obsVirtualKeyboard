@@ -11,13 +11,13 @@ keyboardKeys.forEach(key => {
     keyboard.appendChild(keyboardKey)
 })
 
-keyboard.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', (e) => {
     e.preventDefault()
 
     const { key } = e
     document.querySelector(`.${key}`).classList.add('active')
 })
-keyboard.addEventListener('keyup', (e) => {
+document.addEventListener('keyup', (e) => {
     e.preventDefault()
 
     const { key } = e
